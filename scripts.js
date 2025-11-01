@@ -1,4 +1,4 @@
-// Enkel interaktivitet + smooth scrolling
+// Smooth scrolling
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -13,5 +13,8 @@ document.querySelectorAll('nav a').forEach(link => {
 document.querySelector('footer p').innerHTML =
   `© ${new Date().getFullYear()} Databruk.no – Skapt med 💡 teknologi i tankene.`;
 
-// Fremtidig funksjonalitet (eks: affiliate tracking, popups etc.)
-console.log("Databruk.no lastet!");
+// Initier Lucide ikoner
+window.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  console.log("Databruk.no lastet med ikoner!");
+});

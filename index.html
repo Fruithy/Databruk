@@ -1,121 +1,88 @@
-<!doctype html>
-<html lang="nb">
+<!DOCTYPE html>
+<html lang="no">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Databruk.no — Sammenlign mobil GB-priser</title>
-  <meta name="description" content="Sammenlign norske mobilabonnement etter pris per GB. Telenor, Telia, Talkmore og flere. Finn beste tilbud og støtt nettstedet via affiliate-lenker." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Databruk.no – Anbefalt teknologi og smarte løsninger</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- NOTE: sett inn Google site verification / meta tags her hvis du trenger -->
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/">Databruk.no</a>
-      <nav class="main-nav" aria-label="Hovednavigasjon">
-        <button id="open-filters" class="btn small">Filtrer</button>
-        <a href="#compare" class="btn small">Sammenlign</a>
-        <a href="#operators" class="btn small">Operatører</a>
-      </nav>
-    </div>
+  <header>
+    <h1>Databruk.no</h1>
+    <p>Utforsk anbefalt teknologi, verktøy og smarte løsninger</p>
+    <nav>
+      <a href="#tech">Teknologi</a>
+      <a href="#programvare">Programvare</a>
+      <a href="#gadgets">Gadgets</a>
+      <a href="#om">Om oss</a>
+    </nav>
   </header>
 
-  <main class="container grid-layout">
-    <!-- Hovedinnhold -->
-    <section class="main-col" id="compare">
-      <div class="hero">
-        <h1>Finn beste pris per GB</h1>
-        <p>
-          Søk og sammenlign norske mobilabonnement fra Telenor, Telia, Talkmore og flere — sortér etter pris per GB, totalpris eller operatør.
-        </p>
-        <div class="controls">
-          <label>Min GB: <input type="number" id="minGB" min="0" value="1"/></label>
-          <label>Maks GB: <input type="number" id="maxGB" min="1" value="100"/></label>
-          <label>Vis operatør:
-            <select id="operatorFilter">
-              <option value="all">Alle</option>
-              <option value="Telenor">Telenor</option>
-              <option value="Telia">Telia</option>
-              <option value="Talkmore">Talkmore</option>
-              <option value="ice">ice</option>
-              <option value="OneCall">OneCall</option>
-              <option value="Chilimobil">Chilimobil</option>
-            </select>
-          </label>
-          <label>Sorter etter:
-            <select id="sortBy">
-              <option value="pricePerGb">Pris per GB (lavest)</option>
-              <option value="monthlyPrice">Månedspris (lavest)</option>
-              <option value="gb">GB (størst)</option>
-            </select>
-          </label>
-          <button id="applyFilters" class="btn">Oppdater</button>
-        </div>
+  <main>
+    <section id="tech" class="card-grid">
+      <h2>Utvalgt teknologi</h2>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?laptop" alt="Laptop" />
+        <h3>Perfekte arbeidsmaskiner</h3>
+        <p>Oppdag kraftige og stilige bærbare maskiner for jobb og gaming.</p>
+        <a href="https://adtr.co/example-link1" target="_blank" class="cta">Se tilbud</a>
       </div>
 
-      <section id="results" aria-live="polite" class="results-grid">
-        <!-- JS fyller inn tilbudskort -->
-      </section>
-
-      <div class="compare-bar" id="compareBar" hidden>
-        <div id="selectedCount">0</div>
-        <button id="openCompareModal" class="btn">Sammenlign valgte</button>
-        <button id="clearSelection" class="btn ghost">Tøm</button>
-      </div>
-
-      <!-- Enkel sammenligningsmodal -->
-      <div id="compareModal" class="modal" aria-hidden="true">
-        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
-          <h2 id="compareTitle">Sammenligning</h2>
-          <div id="compareTableWrapper"></div>
-          <div class="modal-actions">
-            <button id="closeCompare" class="btn">Lukk</button>
-          </div>
-        </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?smartphone" alt="Smartphone" />
+        <h3>Smarttelefoner</h3>
+        <p>Finn den beste mobilen for deg – ytelse, kamera og batteritid i toppklasse.</p>
+        <a href="https://adtr.co/example-link2" target="_blank" class="cta">Se beste priser</a>
       </div>
     </section>
 
-    <!-- Sidekolonne: annonser, promos -->
-    <aside class="side-col" aria-label="Annonser og promotering">
-      <div class="ad-slot">
-        <div class="ad-placeholder">Put your ads here — sidebar (300×600)</div>
-        <!-- For Google AdSense: fjern placeholder og lim inn AdSense-kode her -->
+    <section id="programvare" class="card-grid">
+      <h2>Programvare vi anbefaler</h2>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?software" alt="Software" />
+        <h3>VPN & sikkerhet</h3>
+        <p>Beskytt deg på nettet med de mest pålitelige VPN-tjenestene.</p>
+        <a href="https://adtr.co/example-link3" target="_blank" class="cta">Prøv gratis</a>
       </div>
 
-      <div class="promo">
-        <h3>Støtt Databruk.no</h3>
-        <p>Bruk affiliate-lenkene i tilbuds-kortene — det koster ikke ekstra for deg, men hjelper oss å holde tjenesten oppe.</p>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?cloud,storage" alt="Cloud Storage" />
+        <h3>Sky-lagring</h3>
+        <p>Trygg og rask skylagring for alle filene dine.</p>
+        <a href="https://adtr.co/example-link4" target="_blank" class="cta">Start nå</a>
+      </div>
+    </section>
+
+    <section id="gadgets" class="card-grid">
+      <h2>Gadgets & tilbehør</h2>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?smartwatch" alt="Smartklokke" />
+        <h3>Smartklokker</h3>
+        <p>Hold deg oppdatert på helse, trening og varsler – rett på håndleddet.</p>
+        <a href="https://adtr.co/example-link5" target="_blank" class="cta">Finn din klokke</a>
       </div>
 
-      <div class="ad-slot small">
-        <div class="ad-placeholder">Put your ads here — 300×250</div>
+      <div class="card">
+        <img src="https://source.unsplash.com/featured/?headphones" alt="Hodetelefoner" />
+        <h3>Hodetelefoner</h3>
+        <p>Opplev perfekt lyd og komfort – trådløst og stilig.</p>
+        <a href="https://adtr.co/example-link6" target="_blank" class="cta">Se utvalget</a>
       </div>
+    </section>
 
-      <div class="operators-list" id="operators">
-        <h4>Operatører</h4>
-        <ul>
-          <li>Telenor</li>
-          <li>Telia</li>
-          <li>Talkmore</li>
-          <li>ice</li>
-          <li>OneCall</li>
-          <li>Chilimobil</li>
-          <li>MyCall</li>
-        </ul>
-      </div>
-    </aside>
+    <section id="om">
+      <h2>Om Databruk.no</h2>
+      <p>
+        Databruk.no samler de beste anbefalingene innen teknologi og digitale verktøy.
+        Vi benytter affiliate-lenker gjennom Adtraction for å kunne tilby gratis innhold.
+        Når du klikker eller kjøper via våre lenker, støtter du oss uten ekstra kostnad for deg.
+      </p>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Databruk.no — Sammenlign mobilabonnement. <small>Husk: priser kan variere — oppdater alltid hos operatøren før kjøp.</small></p>
-    </div>
+  <footer>
+    <p>© 2025 Databruk.no – Skapt med 💡 teknologi i tankene.</p>
   </footer>
-
-  <!-- IMPORTANT: legg inn din Google AdSense/Ad Manager kode her (etter retningslinjer fra Google). -->
-  <!-- NOTE: bytt "affiliate" lenkene i scripts.js med dine ekte lenker. -->
-
-  <script src="scripts.js" defer></script>
 </body>
 </html>
-

@@ -1,1 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Databruk.no — Sammenlign mobil GB-priser</title>
+  <meta name="description" content="Sammenlign norske mobilabonnement etter pris per GB. Telenor, Telia, Talkmore og flere. Finn beste tilbud og støtt nettstedet via affiliate-lenker." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- NOTE: sett inn Google site verification / meta tags her hvis du trenger -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">Databruk.no</a>
+      <nav class="main-nav" aria-label="Hovednavigasjon">
+        <button id="open-filters" class="btn small">Filtrer</button>
+        <a href="#compare" class="btn small">Sammenlign</a>
+        <a href="#operators" class="btn small">Operatører</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container grid-layout">
+    <!-- Hovedinnhold -->
+    <section class="main-col" id="compare">
+      <div class="hero">
+        <h1>Finn beste pris per GB</h1>
+        <p>
+          Søk og sammenlign norske mobilabonnement fra Telenor, Telia, Talkmore og flere — sortér etter pris per GB, totalpris eller operatør.
+        </p>
+        <div class="controls">
+          <label>Min GB: <input type="number" id="minGB" min="0" value="1"/></label>
+          <label>Maks GB: <input type="number" id="maxGB" min="1" value="100"/></label>
+          <label>Vis operatør:
+            <select id="operatorFilter">
+              <option value="all">Alle</option>
+              <option value="Telenor">Telenor</option>
+              <option value="Telia">Telia</option>
+              <option value="Talkmore">Talkmore</option>
+              <option value="ice">ice</option>
+              <option value="OneCall">OneCall</option>
+              <option value="Chilimobil">Chilimobil</option>
+            </select>
+          </label>
+          <label>Sorter etter:
+            <select id="sortBy">
+              <option value="pricePerGb">Pris per GB (lavest)</option>
+              <option value="monthlyPrice">Månedspris (lavest)</option>
+              <option value="gb">GB (størst)</option>
+            </select>
+          </label>
+          <button id="applyFilters" class="btn">Oppdater</button>
+        </div>
+      </div>
+
+      <section id="results" aria-live="polite" class="results-grid">
+        <!-- JS fyller inn tilbudskort -->
+      </section>
+
+      <div class="compare-bar" id="compareBar" hidden>
+        <div id="selectedCount">0</div>
+        <button id="openCompareModal" class="btn">Sammenlign valgte</button>
+        <button id="clearSelection" class="btn ghost">Tøm</button>
+      </div>
+
+      <!-- Enkel sammenligningsmodal -->
+      <div id="compareModal" class="modal" aria-hidden="true">
+        <div class="modal-inner" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+          <h2 id="compareTitle">Sammenligning</h2>
+          <div id="compareTableWrapper"></div>
+          <div class="modal-actions">
+            <button id="closeCompare" class="btn">Lukk</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sidekolonne: annonser, promos -->
+    <aside class="side-col" aria-label="Annonser og promotering">
+      <div class="ad-slot">
+        <div class="ad-placeholder">Put your ads here — sidebar (300×600)</div>
+        <!-- For Google AdSense: fjern placeholder og lim inn AdSense-kode her -->
+      </div>
+
+      <div class="promo">
+        <h3>Støtt Databruk.no</h3>
+        <p>Bruk affiliate-lenkene i tilbuds-kortene — det koster ikke ekstra for deg, men hjelper oss å holde tjenesten oppe.</p>
+      </div>
+
+      <div class="ad-slot small">
+        <div class="ad-placeholder">Put your ads here — 300×250</div>
+      </div>
+
+      <div class="operators-list" id="operators">
+        <h4>Operatører</h4>
+        <ul>
+          <li>Telenor</li>
+          <li>Telia</li>
+          <li>Talkmore</li>
+          <li>ice</li>
+          <li>OneCall</li>
+          <li>Chilimobil</li>
+          <li>MyCall</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Databruk.no — Sammenlign mobilabonnement. <small>Husk: priser kan variere — oppdater alltid hos operatøren før kjøp.</small></p>
+    </div>
+  </footer>
+
+  <!-- IMPORTANT: legg inn din Google AdSense/Ad Manager kode her (etter retningslinjer fra Google). -->
+  <!-- NOTE: bytt "affiliate" lenkene i scripts.js med dine ekte lenker. -->
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
 
